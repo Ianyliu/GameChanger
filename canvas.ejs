@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+<html class="scripts-not-loaded" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>User Dashboard</title>
+    <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="https://courses.ftcmny.org/accounts/2/files/2052/download?verifier=RT5iXdb0mgcoeFIxCZyocCQnnild5YspMpsalL0p" />
+    <link rel="apple-touch-icon" href="https://courses.ftcmny.org/accounts/2/files/2053/download?verifier=tcmbc9WoUdVfyNzaZcOBrwlmQ4rU6x0Da3FSgyCI" />
+    <link rel="alternate" type="application/atom+xml" title="User Atom Feed (All Courses)" href="/feeds/users/user_fbvQMTQJYeIGATaL70FTg3DsXnUEXdvaj4gUqI3b.atom" />
+
+    <link rel="stylesheet" media="all" href="/dist/brandable_css/0529b1f207e406b35628c9e9b69402b5/new_styles_normal_contrast/bundles/common-12b825eb24.css" />
+    <script>
+        //<![CDATA[
+
+        !function(){
+            var o,s,v;
+            if (!(window.Promise && Object.assign && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+                s = 's', document.write('<'+s+'cr'+'ipt src="/dist/javascripts/vendor/ie11-polyfill-6afc9bbb51.js"></'+s+'c'+'ript>');
+            }
+        }();
+
+        //]]>
+    </script>
+    <script src="/dist/javascripts/vendor/lato-fontfaceobserver-bddf7e337a.js" async="async"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2773e2">
+    <link rel="stylesheet" media="all" href="/dist/brandable_css/0529b1f207e406b35628c9e9b69402b5/new_styles_normal_contrast/bundles/dashboard-c42271f6c4.css" />
+    <link rel="stylesheet" media="all" href="/dist/brandable_css/0529b1f207e406b35628c9e9b69402b5/new_styles_normal_contrast/bundles/dashboard_card-1c6b09a6ab.css" />
+
+
+    <script>
+        // listen for any clicks on links that have href="#" or data-method set and queue them to be fired on dom ready.
+        // note: the events targeted for a[data-method] elems don't get properly replayed, but
+        // at least we can gobble them up here to prevent errors.
+        function _earlyClick(e){
+            var cur = e.target;
+            while ( cur && cur.ownerDocument ) {
+                if ( cur.getAttribute('href') === '#' || cur.getAttribute('data-method') ) {
+                    e.preventDefault();
+                    _earlyClick.clicks = _earlyClick.clicks || [];
+                    _earlyClick.clicks.push(cur);
+                    break;
+                }
+                cur = cur.parentNode;
+            }
+        }
+        document.addEventListener('click', _earlyClick);
+    </script>
+</head>
+
+<body class="with-right-side  Underline-All-Links__enabled primary-nav-expanded context-user_222">
+<noscript>
+    <div role="alert" class="ic-flash-static ic-flash-error">
+        <div class="ic-flash__icon" aria-hidden="true">
+            <i class="icon-warning"></i>
+        </div>
+        <h1>You need to have JavaScript enabled in order to access this site.</h1>
+    </div>
+</noscript>
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app">
+    <header id="header" class="ic-app-header no-print ">
+        <a href="#content" id="skip_navigation_link">Skip To Content</a>
+        <div role="region" class="ic-app-header__main-navigation" aria-label="Main Navigation">
+            <div class="ic-app-header__logomark-container">
+                <a href="https://course.mt.feitian.edu/" class="ic-app-header__logomark">
+                    <span class="screenreader-only">Dashboard</span>
+                </a>
+            </div>
+            <ul id="menu" class="ic-app-header__menu-list">
+                <li class="menu-item ic-app-header__menu-list-item ">
+                    <a id="global_nav_profile_link" href="/profile" class="ic-app-header__menu-list-link">
+                        <div class="menu-item-icon-container" aria-hidden="true">
+                            <div class="ic-avatar ">
+                                <img src="https://secure.gravatar.com/avatar/4f90cc6c2179e45b7aa41746dee0666f?s=50&amp;d=https%3A%2F%2Fcourse.mt.feitian.edu%2Fimages%2Fmessages%2Favatar-50.png" alt="Ian Liu" />
+                            </div>
+                        </div>
+                        <div class="menu-item__text">
+                            Account
+                        </div>
+                    </a>
+                </li>
+                <li class="ic-app-header__menu-list-item  ic-app-header__menu-list-item--active">
+                    <a id="global_nav_dashboard_link" href="https://course.mt.feitian.edu/" class="ic-app-header__menu-list-link">
+                        <div class="menu-item-icon-container" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M231.6 94.2c-2.5-4.9-8.5-6.9-13.4-4.5l-57.3 28.6c-5.4-5.2-12.7-8.4-20.8-8.4 -16.6 0-30 13.5-30 30 0 16.6 13.5 30 30 30 16.6 0 30-13.5 30-30 0-1.3-0.1-2.5-0.2-3.8l57.3-28.6C232 105.2 234 99.2 231.6 94.2zM140 150c-5.5 0-10-4.5-10-10s4.5-10 10-10c5.5 0 10 4.5 10 10S145.6 150 140 150zM70 150H50c-5.5 0-10-4.5-10-10s4.5-10 10-10h20c5.5 0 10 4.5 10 10S75.5 150 70 150zM140 80c-5.5 0-10-4.5-10-10V50c0-5.5 4.5-10 10-10 5.5 0 10 4.5 10 10v20C150 75.5 145.5 80 140 80zM105 89.6c-3.5 0-6.8-1.8-8.7-5l-10-17.3c-2.8-4.8-1.1-10.9 3.7-13.7 4.8-2.8 10.9-1.1 13.7 3.7l10 17.3c2.8 4.8 1.1 10.9-3.7 13.7C108.4 89.1 106.7 89.6 105 89.6zM79.4 115.4c-1.7 0-3.4-0.4-5-1.3l-17.3-10c-4.8-2.8-6.4-8.9-3.7-13.7 2.8-4.8 8.9-6.4 13.7-3.7l17.3 10c4.8 2.8 6.4 8.9 3.7 13.7C86.2 113.6 82.8 115.4 79.4 115.4zM173.6 89.6c-1.7 0-3.4-0.4-5-1.3 -4.8-2.8-6.4-8.9-3.7-13.7l10-17.3c2.8-4.8 8.9-6.4 13.7-3.7 4.8 2.8 6.4 8.9 3.7 13.7l-10 17.3C180.4 87.8 177.1 89.6 173.6 89.6zM140 0C62.8 0 0 63 0 140.5V190c0 5.5 4.5 10 10 10h260c5.5 0 10-4.5 10-10v-49.5C280 63 217.2 0 140 0zM260 180H20v-39.5C20 74.1 73.8 20 140 20c66.2 0 120 54.1 120 120.5V180zM230 150h-20c-5.5 0-10-4.5-10-10s4.5-10 10-10h20c5.5 0 10 4.5 10 10S235.5 150 230 150z"/></svg>
+                        </div>
+                        <div class="menu-item__text">Dashboard</div>
+                    </a>
+                </li>
+                <li class="menu-item ic-app-header__menu-list-item ">
+                    <a id="global_nav_courses_link" href="/courses" class="ic-app-header__menu-list-link">
+                        <div class="menu-item-icon-container" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M226.2 259H32.3c-5.9 0-10.8-4.8-10.8-10.8v-43.5H10.8C4.8 204.8 0 199.9 0 194c0-6 4.8-10.8 10.8-10.8h10.8v-21.6H10.8c-5.9 0-10.8-4.8-10.8-10.8s4.8-10.8 10.8-10.8h10.8v-21.6H10.8c-5.9 0-10.8-4.8-10.8-10.8 0-6 4.8-10.8 10.8-10.8h10.8V75.4H10.8C4.8 75.4 0 70.6 0 64.7s4.8-10.8 10.8-10.8h10.8V10.8c0-6 4.8-10.8 10.8-10.8h193.9c5.9 0 10.8 4.8 10.8 10.8v21.6h32.3c5.9 0 10.8 4.8 10.8 10.8v172.4c0 6-4.8 10.8-10.8 10.8H237v21.9C237 254.2 232.2 259 226.2 259zM43.1 237.4h172.4V21.6H43.1v32.3h10.7c5.9 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8H43.1V97h10.7c5.9 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8H43.1v21.6h10.7c5.9 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8H43.1v21.6h10.7c5.9 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8H43.1V237.4zM237 204.8h21.5v-21.6H237V204.8zM237 161.7h21.5v-21.6H237V161.7zM237 118.5h21.5V97H237V118.5zM237 75.4h21.5V53.9H237V75.4zM172.2 129.3H96.9c-5.9 0-10.8-4.8-10.8-10.8V64.7c0-6 4.8-10.8 10.8-10.8h75.3c5.9 0 10.8 4.8 10.8 10.8v53.9C183 124.5 178.2 129.3 172.2 129.3zM107.7 107.8h53.8V75.4h-53.8V107.8z"/></svg>
+                        </div>
+                        <div class="menu-item__text">
+                            Courses
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item ic-app-header__menu-list-item ">
+                    <a id="global_nav_calendar_link" href="/calendar" class="ic-app-header__menu-list-link">
+                        <div class="menu-item-icon-container" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M268.3 280H11.7C5.2 280 0 274.8 0 268.3V35c0-6.4 5.2-11.7 11.7-11.7h35V11.7C46.7 5.2 51.9 0 58.3 0h35C99.8 0 105 5.2 105 11.7v11.7h70V11.7C175 5.2 180.2 0 186.7 0h35c6.4 0 11.7 5.2 11.7 11.7v11.7h35c6.4 0 11.7 5.2 11.7 11.7v233.3C280 274.8 274.8 280 268.3 280zM23.3 256.7h233.3v-210h-23.3v11.7c0 6.4-5.2 11.7-11.7 11.7h-35c-6.4 0-11.7-5.2-11.7-11.7V46.7h-70v11.7c0 6.4-5.2 11.7-11.7 11.7h-35c-6.4 0-11.7-5.2-11.7-11.7V46.7H23.3V256.7zM198.3 46.7H210V23.3h-11.7V46.7zM70 46.7h11.7V23.3H70V46.7zM198.3 245c-6.4 0-11.7-5.2-11.7-11.7v-11.7h-35v11.7c0 6.4-5.2 11.7-11.7 11.7 -6.4 0-11.7-5.2-11.7-11.7v-11.7h-35v11.7c0 6.4-5.2 11.7-11.7 11.7S70 239.8 70 233.3v-11.7H46.7c-6.4 0-11.7-5.2-11.7-11.7s5.2-11.7 11.7-11.7H70V175H46.7c-6.4 0-11.7-5.2-11.7-11.7 0-6.4 5.2-11.7 11.7-11.7H70v-23.3H46.7c-6.4 0-11.7-5.2-11.7-11.7S40.2 105 46.7 105H70V93.3c0-6.4 5.2-11.7 11.7-11.7s11.7 5.2 11.7 11.7V105h35V93.3c0-6.4 5.2-11.7 11.7-11.7 6.4 0 11.7 5.2 11.7 11.7V105h35V93.3c0-6.4 5.2-11.7 11.7-11.7 6.4 0 11.7 5.2 11.7 11.7V105h23.3c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7H210v23.3h23.3c6.4 0 11.7 5.2 11.7 11.7 0 6.4-5.2 11.7-11.7 11.7H210v23.3h23.3c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7H210v11.7C210 239.8 204.8 245 198.3 245zM151.7 198.3h35V175h-35V198.3zM93.3 198.3h35V175h-35V198.3zM151.7 151.7h35v-23.3h-35V151.7zM93.3 151.7h35v-23.3h-35V151.7z"/></svg>
+                        </div>
+                        <div class="menu-item__text">
+                            Calendar
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item ic-app-header__menu-list-item ">
+                    <a id="global_nav_conversations_link" href="/conversations" class="ic-app-header__menu-list-link">
+                        <div class="menu-item-icon-container" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M93.3 105c0-6.4 5.2-11.7 11.7-11.7h70c6.4 0 11.7 5.2 11.7 11.7s-5.2 11.7-11.7 11.7h-70C98.6 116.7 93.3 111.4 93.3 105zM105 70h23.3c6.4 0 11.7-5.2 11.7-11.7s-5.2-11.7-11.7-11.7H105c-6.4 0-11.7 5.2-11.7 11.7S98.6 70 105 70zM280 198.3v70c0 6.4-5.2 11.7-11.7 11.7H11.7C5.2 280 0 274.8 0 268.3v-69.8c0-1.1 0.1-2.2 0.4-3.3 0.3-1.1 0.8-2.1 1.3-3L36.7 134c2.1-3.5 5.9-5.7 10-5.7h11.7V11.7C58.3 5.2 63.6 0 70 0h140c6.4 0 11.7 5.2 11.7 11.7v116.7h11.7c4.1 0 7.9 2.1 10 5.7l35 58.3c0.1 0.2 0.1 0.5 0.3 0.7 0.4 0.7 0.6 1.4 0.8 2.2 0.2 0.8 0.4 1.5 0.5 2.3C279.9 197.8 280 198.1 280 198.3zM32.3 186.7h67.9c6.4 0 11.7 5.2 11.7 11.7V210c0 7.8 3.5 7.8 6 7.8h48.7c5.7 0 10.5-3.6 10.5-7.8v-11.7c0-6.4 5.2-11.7 11.7-11.7h59l-21-35h-5.1v11.7c0 6.4-5.2 11.7-11.7 11.7s-11.7-5.2-11.7-11.7v-140H81.7v140c0 6.4-5.2 11.7-11.7 11.7s-11.7-5.2-11.7-11.7v-11.7h-5.1L32.3 186.7zM256.7 210h-56.3c0 17.2-15.2 31.1-33.8 31.1h-48.7c-17.6 0-29.4-12.5-29.4-31.1H23.3v46.7h233.3V210zM175 163.3c6.4 0 11.7-5.2 11.7-11.7 0-6.4-5.2-11.7-11.7-11.7h-70c-6.4 0-11.7 5.2-11.7 11.7 0 6.4 5.2 11.7 11.7 11.7H175z"/></svg>
+                            <span class="menu-item__badge" style="display: none">0</span>
+                        </div>
+                        <div class="menu-item__text">
+                            Inbox
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="ic-app-header__secondary-navigation">
+            <ul class="ic-app-header__menu-list">
+                <li class="menu-item ic-app-header__menu-list-item">
+                    <button
+                            id="primaryNavToggle"
+                            class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle"
+                            aria-label="
+                Minimize global navigation"
+                            title="
+                Minimize global navigation"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <polygon points="20.6 9.4 23.4 6.6 32.8 16 23.4 25.4 20.6 22.6 25.2 18 0 18 0 14 25.2 14 "/><rect x="36" width="4" height="32"/>
+</svg>
+
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div id="global_nav_tray_container"></div>
+    </header>
+
+
+    <div id="instructure_ajax_error_box">
+        <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+        <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+    </div>
+
+
+
+    <div id="wrapper" class="ic-Layout-wrapper">
+        <div id="main" class="ic-Layout-columns">
+            <div id="not_right_side" class="ic-app-main-content">
+                <div id="content-wrapper" class="ic-Layout-contentWrapper">
+
+                    <div id="content" class="ic-Layout-contentMain" role="main">
+
+
+
+
+                        <div id="dashboard">
+
+
+
+
+
+
+
+
+                            <div class="ic-Dashboard-header">
+                                <div class="grid-row bottom-xs">
+                                    <div class="col-xs-9">
+                                        <h1 class="ic-Dashboard-header_title">Dashboard</h1>
+                                    </div>
+                                    <div id="DashboardOptionsMenu_Container"
+                                         class="col-xs-3 ic-Dashboard-content--align-right">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard-activity" class="ic-Dashboard-Activity" style="display: none">
+                                <h2 class="recent-activity-header">
+                                    Recent Activity
+                                </h2>
+
+                                <ul class="recent_activity unstyled_list">
+                                    <li class="stream-category stream-announcement" data-category="Announcement">
+                                        <div class="stream_header">
+                                            <div class="image-block">
+                                                <div class=image-block-image>
+                                                    <i class="icon-announcement"></i>
+                                                </div>
+                                                <div class=image-block-content>
+                                                    <div class=title>
+                                                        <b class="count">4</b> Announcements
+                                                    </div>
+                                                    <div class="links">
+                                                        <a href="/courses/447/announcements" aria-label="Visit Course Announcements for STA101">STA101</a> and <a href="/courses/416/announcements" aria-label="Visit Course Announcements for MAT106">MAT106</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=header-right-side>
+                                                <a href="#" class="toggle-details" aria-controls="details_container"></a>
+                                            </div>
+                                        </div>
+
+                                        <div class='details_container'>
+                                            <table id="announcement-details" class="stream-details">
+                                                <caption class="accessibly-hidden">Announcement Details</caption>
+                                                <thead class="accessibly-hidden">
+                                                <tr>
+                                                    <th scope="col">Unread</th>
+                                                    <th scope="col">Message</th>
+                                                    <th scope="col">Date</th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/announcements/1435" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            (VERY IMPORTANT!) Classes will go online between Jan 23 and Feb 1
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 23 at  2:09pm" data-tooltip="top">Jan 23 at  2:09pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29084" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/announcements/1433" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            (VERY IMPORTANT!) Classes will go online between Jan 23 and Feb 1
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 23 at  2:05pm" data-tooltip="top">Jan 23 at  2:05pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29082" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/announcements/1421" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            The first guidance video uploaded
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 15 at  5:21pm" data-tooltip="top">Jan 15 at  5:21pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28587" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/announcements/1393" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            Welcome message from the instructor
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 10 at  5:50pm" data-tooltip="top">Jan 10 at  5:50pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28405" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li class="stream-category stream-conversation" data-category="Conversation">
+                                        <div class="stream_header">
+                                            <div class="image-block">
+                                                <div class=image-block-image>
+                                                    <i class="icon-message"></i>
+                                                </div>
+                                                <div class=image-block-content>
+                                                    <div class=title>
+                                                        <b class="count">4</b> Conversation Messages
+                                                    </div>
+                                                    <div class="links">
+                                                        Samuel Zhou
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=header-right-side>
+                                                <a href="#" class="toggle-details" aria-controls="details_container"></a>
+                                            </div>
+                                        </div>
+
+                                        <div class='details_container'>
+                                            <table id="conversation-details" class="stream-details">
+                                                <caption class="accessibly-hidden">Conversation Details</caption>
+                                                <thead class="accessibly-hidden">
+                                                <tr>
+                                                    <th scope="col">Unread</th>
+                                                    <th scope="col">Message</th>
+                                                    <th scope="col">Date</th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/conversations/2159" class="content_summary">
+                                                            <span class="fake-link">Samuel Zhou</span>
+                                                            <strong></strong>
+                                                            Dear Student,
+
+                                                            I cannot come to school today. Therefore our class in the afternoon will be online.
+
+                                                            Please use the following class link:
+                                                            https://naa.vedamo.com/closed/key/5f45400fb6d9c
+
+                                                            See you then.
+
+                                                            Mr. Zhou
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Feb 5 at 10:16am" data-tooltip="top">Feb 5 at 10:16am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29797" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/conversations/2126" class="content_summary">
+                                                            <span class="fake-link">Samuel Zhou</span>
+                                                            <strong></strong>
+                                                            Hi,
+
+                                                            Here is the class link we&#39;ll use for online classes:
+                                                            https://naa.vedamo.com/closed/key/5f45400fb6d9c
+
+                                                            Mr. Zhou
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 29 at  1:29pm" data-tooltip="top">Jan 29 at  1:29pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29506" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/conversations/2111" class="content_summary">
+                                                            <span class="fake-link">Samuel Zhou</span>
+                                                            <strong></strong>
+                                                            https://ftcmweb1.my.webex.com/webappng/sites/ftcmweb1.my/meeting/download/511392a6afcd40f69e14ed83130209fc?siteurl=ftcmweb1.my&amp;MTID=meca138e5e527f203a2c9ab9b4c8a5f8a
+
+                                                            or
+
+                                                            https://ftcmweb1.my.webex.com/ftcmweb1.my/j.php?MTID=meca138e5e527f203a2c9ab...
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 27 at  2:18pm" data-tooltip="top">Jan 27 at  2:18pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29342" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/conversations/2065" class="content_summary">
+                                                            <span class="fake-link">Samuel Zhou</span>
+                                                            <strong></strong>
+                                                            Hi,
+
+                                                            HW1 is posted and due on Sunday 1/24.
+
+                                                            You can start working on the problems. We&#39;ll have further discussion on big Oh in the next class.
+
+                                                            Mr. Zhou
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 16 at 12:39am" data-tooltip="top">Jan 16 at 12:39am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28610" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li class="stream-category stream-assignment" data-category="Assignment">
+                                        <div class="stream_header">
+                                            <div class="image-block">
+                                                <div class=image-block-image>
+                                                    <i class="icon-assignment"></i>
+                                                </div>
+                                                <div class=image-block-content>
+                                                    <div class=title>
+                                                        <b class="count">37</b> Assignment Notifications
+                                                    </div>
+                                                    <div class="links">
+                                                        <a href="/courses/447/assignments" aria-label="Visit Course Assignments for STA101">STA101</a>, <a href="/courses/416/assignments" aria-label="Visit Course Assignments for MAT106">MAT106</a>, <a href="/courses/415/assignments" aria-label="Visit Course Assignments for CIS105">CIS105</a>, and <a href="/courses/410/assignments" aria-label="Visit Course Assignments for DAS151B">DAS151B</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=header-right-side>
+                                                <a href="#" class="toggle-details" aria-controls="details_container"></a>
+                                            </div>
+                                        </div>
+
+                                        <div class='details_container'>
+                                            <table id="assignment-details" class="stream-details">
+                                                <caption class="accessibly-hidden">Assignment Details</caption>
+                                                <thead class="accessibly-hidden">
+                                                <tr>
+                                                    <th scope="col">Unread</th>
+                                                    <th scope="col">Message</th>
+                                                    <th scope="col">Date</th>
+                                                    <th></th>
+                                                </tr>
+                                                </thead>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/assignments/2579" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Quiz #1 (Feb 2, online class), Principles of Probability and Statistics
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Feb 2 at 11:48am" data-tooltip="top">Feb 2 at 11:48am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29624" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2578" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #4 (Due Feb 9 in class), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Feb 2 at 10:48am" data-tooltip="top">Feb 2 at 10:48am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29610" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2577" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - In-class practice (Feb 2, online), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Feb 2 at  8:49am" data-tooltip="top">Feb 2 at  8:49am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29598" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2571" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework 3, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 30 at 10:07am" data-tooltip="top">Jan 30 at 10:07am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29529" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2569" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Quiz #3, Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 29 at  8:48am" data-tooltip="top">Jan 29 at  8:48am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29482" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/assignments/2557" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            Assignment Due Date Changed: Homework #2 (Due on Feb 3 in class, need to submit online), Principles of Probability and Statistics
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 28 at  3:36pm" data-tooltip="top">Jan 28 at  3:36pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29449" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2561" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - In-class Practice (Jan 28, online), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 28 at  8:46am" data-tooltip="top">Jan 28 at  8:46am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29396" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/assignments/2557" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #2 (Due on Feb 2 in class, need to submit online), Principles of Probability and Statistics
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 26 at  6:15pm" data-tooltip="top">Jan 26 at  6:15pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29301" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2547" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - In-class practice (Jan 26), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 26 at  8:54am" data-tooltip="top">Jan 26 at  8:54am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29185" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2539" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework 2, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 24 at 12:28am" data-tooltip="top">Jan 24 at 12:28am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29087" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2535" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #3 (Due Jan 29, Friday in class), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 22 at  9:10am" data-tooltip="top">Jan 22 at  9:10am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29041" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2533" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Quiz #2, Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 21 at 10:37am" data-tooltip="top">Jan 21 at 10:37am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/29013" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/447/assignments/2477" class="content_summary">
+                                                            <span class="fake-link">STA101</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #1 (Due on Jan 26 in class), Principles of Probability and Statistics
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 19 at 12:15pm" data-tooltip="top">Jan 19 at 12:15pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28653" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2473" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Quiz #1, Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 18 at 10:50pm" data-tooltip="top">Jan 18 at 10:50pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28632" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2465" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework 1, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 16 at 12:14am" data-tooltip="top">Jan 16 at 12:14am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28601" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2462" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #2 (Due Jan 22, Friday in class), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 15 at  8:55am" data-tooltip="top">Jan 15 at  8:55am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28567" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/416/assignments/2452" class="content_summary">
+                                                            <span class="fake-link">MAT106</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Homework #1 (Due Jan 19, Tuesday in class), Calculus II
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  6:52pm" data-tooltip="top">Jan 11 at  6:52pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28479" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2451" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Final Review Presentations, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:55am" data-tooltip="top">Jan 11 at  8:55am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28471" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2450" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Semester Summary - 28Apr21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:51am" data-tooltip="top">Jan 11 at  8:51am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28463" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2449" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 13 - 21Apr21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:49am" data-tooltip="top">Jan 11 at  8:49am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28459" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2448" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 12 - 14Apr21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:48am" data-tooltip="top">Jan 11 at  8:48am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28455" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2447" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 11 - 7Apr21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:47am" data-tooltip="top">Jan 11 at  8:47am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28451" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2446" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 10 - 31Mar21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:46am" data-tooltip="top">Jan 11 at  8:46am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28447" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2445" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 9 - 24Mar21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:45am" data-tooltip="top">Jan 11 at  8:45am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28443" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2444" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 8 - 10Mar21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:44am" data-tooltip="top">Jan 11 at  8:44am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28439" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2443" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 7 - 3Mar21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:43am" data-tooltip="top">Jan 11 at  8:43am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28435" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2442" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 6 - 24Feb21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:42am" data-tooltip="top">Jan 11 at  8:42am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28431" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2441" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 5 - 17Feb21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:41am" data-tooltip="top">Jan 11 at  8:41am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28427" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2440" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 4 - 10Feb21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:41am" data-tooltip="top">Jan 11 at  8:41am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28423" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2439" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 3 - 3Feb21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:40am" data-tooltip="top">Jan 11 at  8:40am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28419" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2438" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - WSR 2 - 27Jan21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:39am" data-tooltip="top">Jan 11 at  8:39am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28415" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/410/assignments/2437" class="content_summary">
+                                                            <span class="fake-link">DAS151B</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Weekly Status Review 1 - 20Jan21, Real-time Data Analytics B
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 11 at  8:38am" data-tooltip="top">Jan 11 at  8:38am</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28411" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2407" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - LinkedQueue Quiz, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 9 at  4:54pm" data-tooltip="top">Jan 9 at  4:54pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28330" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2405" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Array Based List Week of March 23 Quiz(timed for 15min), Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 9 at  4:54pm" data-tooltip="top">Jan 9 at  4:54pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28327" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2403" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - LinkedStack/Queues Quiz, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 9 at  4:54pm" data-tooltip="top">Jan 9 at  4:54pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28322" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2404" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Stack example Quiz (20min), Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 9 at  4:54pm" data-tooltip="top">Jan 9 at  4:54pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28321" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/courses/415/assignments/2402" class="content_summary">
+                                                            <span class="fake-link">CIS105</span>
+                                                            <strong></strong>
+                                                            Assignment Created - Trees Quiz, Data Structure and Algorithms
+                                                        </a>
+                                                    </td>
+                                                    <td class="date" tabindex=0 >
+                                                        <span data-html-tooltip-title="Jan 9 at  4:54pm" data-tooltip="top">Jan 9 at  4:54pm</span>
+                                                    </td>
+                                                    <td class="remove">
+                                                        <a class="close ignore-item" href="#" data-url="https://course.mt.feitian.edu/dashboard/ignore_stream_item/28318" data-remove='tr' title="Ignore" aria-label="Ignore" role="button">×</a>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+
+
+
+                            <div id="DashboardCard_Container" style="display: block">
+                                <div class="ic-DashboardCard__box">
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                    <div class="ic-DashboardCard">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ic-DashboardCard__placeholder-svg" version="1.1" x="0" y="0" viewBox="-1087 618 260 254" xml:space="preserve">
+          <title>Empty Card</title>
+                                            <g class="ic-DashboardCard__placeholder-animates">
+                                                <path d="M-1087 618h260v126h-260V618z"/>
+                                                <rect x="-1062" y="759.5" class="st0" width="184" height="16"/>
+                                                <rect x="-1062" y="785.5" class="st0" width="106" height="9"/>
+                                                <circle cx="-1054" cy="842.5" r="8"/>
+                                                <circle cx="-989" cy="842.5" r="8"/>
+                                                <circle cx="-924" cy="842.5" r="8"/>
+                                                <circle cx="-859" cy="842.5" r="8"/>
+                                            </g>
+        </svg>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+                    <aside id="right-side" role="complementary">
+                        <div class="placeholder"></div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <footer role="contentinfo" id="footer" class="ic-app-footer">
+            <a href="http://www.instructure.com" class="footer-logo ic-app-footer__logo-link">
+    <span class="screenreader-only">
+      Powered by Instructure Canvas LMS
+    </span>
+            </a>
+            <div id="footer-links" class="ic-app-footer__links">
+                <a target="_blank" href="http://www.ftcmny.org">Go to school website</a>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+    </div>
+    <div id="cant_record_dialog" style="display: none;">
+        <div>
+            In order to create video or audio recordings your computer needs to be
+            webcam-enabled.  If you don&#39;t have a webcam on your computer, you can still
+            record audio-only messages by first installing the Google Video Chat
+            plugin.
+        </div>
+        <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+            <a href="http://www.google.com/chat/video" target="_blank" class="btn">Install the Video Plugin</a>
+        </div>
+        <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+            <a href="#" class="cant_record_link">Don&#39;t have a webcam?</a>
+        </div>
+    </div>
+    <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+    <div id='StudentContextTray__Container'></div>
+    <script src="/dist/brandable_css/0529b1f207e406b35628c9e9b69402b5/variables-b7abd891db84754772e26cbf3eab6cd5.js"></script>
+    <script>
+        INST = {"environment":"production","disableScribdPreviews":true,"disableCrocodocPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[]};
+        ENV = {"ASSET_HOST":null,"active_brand_config":"0529b1f207e406b35628c9e9b69402b5","active_brand_config_json_url":"\/dist\/brandable_css\/0529b1f207e406b35628c9e9b69402b5\/variables-b7abd891db84754772e26cbf3eab6cd5.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":"\/dist\/brandable_css\/0529b1f207e406b35628c9e9b69402b5\/new_styles_normal_contrast\/bundles\/what_gets_loaded_inside_the_tinymce_editor-da765ef8c0.css","current_user_id":"222","current_user":{"id":"222","display_name":"Ian Liu","avatar_image_url":"https:\/\/secure.gravatar.com\/avatar\/4f90cc6c2179e45b7aa41746dee0666f?s=50\u0026d=https%3A%2F%2Fcourse.mt.feitian.edu%2Fimages%2Fmessages%2Favatar-50.png","html_url":"https:\/\/course.mt.feitian.edu\/about\/222"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"course.mt.feitian.edu","DOMAIN_ROOT_ACCOUNT_ID":10000000000001,"k12":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":false,"show_feedback_link":false,"enable_profiles":true},"context_asset_string":null,"TIMEZONE":"America\/New_York","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","INCOMPLETE_REGISTRATION":null,"USER_EMAIL":"liuusa.tw@gmail.com","DASHBOARD_SIDEBAR_URL":"https:\/\/course.mt.feitian.edu\/dashboard-sidebar","PREFERENCES":{"recent_activity_dashboard":null,"hide_dashcard_color_overlays":null,"custom_colors":{"course_301":"#D41E00","course_304":"#91349B","course_325":"#91349B","course_331":"#3C4F36","course_324":"#254284","course_351":"#D41E00","course_345":"#3C4F36","course_346":"#177B63","course_364":"#9F7217","course_367":"#b48b07","course_416":"#9F7217","course_415":"#91349B","course_443":"#254284","course_447":"#E1185C","course_410":"#008400","course_441":"#626E7B","course_465":"#177B63","course_466":"#254284"},"show_planner":false},"STUDENT_PLANNER_ENABLED":false,"DASHBOARD_COURSES":[{"longName":"Calculus I - MAT105","shortName":"Calculus I","originalName":"Calculus I","courseCode":"MAT105","assetString":"course_325","href":"\/courses\/325","term":"Fall 2020","subtitle":"enrolled as: Student","id":"325","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"announcements","icon":"icon-announcement","hidden":null,"path":"\/courses\/325\/announcements","screenreader":"Course Announcements"},{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/325\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/325\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/325\/files","screenreader":"Course Files"}]},{"longName":"Calculus II - MAT106","shortName":"Calculus II","originalName":"Calculus II","courseCode":"MAT106","assetString":"course_416","href":"\/courses\/416","term":"Spring 2021","subtitle":"enrolled as: Student","id":"416","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"announcements","icon":"icon-announcement","hidden":null,"path":"\/courses\/416\/announcements","screenreader":"Course Announcements"},{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/416\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/416\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/416\/files","screenreader":"Course Files"}]},{"longName":"College Success - LAS003","shortName":"College Success","originalName":"College Success","courseCode":"LAS003","assetString":"course_351","href":"\/courses\/351","term":"Fall 2020","subtitle":"enrolled as: Student","id":"351","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/351\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/351\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/351\/files","screenreader":"Course Files"}]},{"longName":"Data Structure and Algorithms - CIS105","shortName":"Data Structure and Algorithms","originalName":"Data Structure and Algorithms","courseCode":"CIS105","assetString":"course_415","href":"\/courses\/415","term":"Spring 2021","subtitle":"enrolled as: Student","id":"415","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/415\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/415\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/415\/files","screenreader":"Course Files"}]},{"longName":"Fundamentals of Classical Chinese Dance I - DAN101R - M","shortName":"Fundamentals of Classical Chinese Dance I","originalName":"Fundamentals of Classical Chinese Dance I","courseCode":"DAN101R - M","assetString":"course_465","href":"\/courses\/465","term":"Spring 2021","subtitle":"enrolled as: Student","id":"465","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/465\/discussion_topics","screenreader":"Course Discussions"}]},{"longName":"Fundamentals of Classical Chinese Dance I - DAN101R","shortName":"Fundamentals of Classical Chinese Dance I","originalName":"Fundamentals of Classical Chinese Dance I","courseCode":"DAN101R","assetString":"course_364","href":"\/courses\/364","term":"Fall 2020","subtitle":"enrolled as: Student","id":"364","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/364\/discussion_topics","screenreader":"Course Discussions"}]},{"longName":"Introduction to Repertoire of Dance - DAN121R - M","shortName":"Introduction to Repertoire of Dance","originalName":"Introduction to Repertoire of Dance","courseCode":"DAN121R - M","assetString":"course_466","href":"\/courses\/466","term":"Spring 2021","subtitle":"enrolled as: Student","id":"466","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/466\/discussion_topics","screenreader":"Course Discussions"}]},{"longName":"Introduction to Repertoire of Dance - DAN121R","shortName":"Introduction to Repertoire of Dance","originalName":"Introduction to Repertoire of Dance","courseCode":"DAN121R","assetString":"course_367","href":"\/courses\/367","term":"Fall 2020","subtitle":"enrolled as: Student","id":"367","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/367\/discussion_topics","screenreader":"Course Discussions"}]},{"longName":"Linear Algebra - MAT103","shortName":"Linear Algebra","originalName":"Linear Algebra","courseCode":"MAT103","assetString":"course_324","href":"\/courses\/324","term":"Fall 2020","subtitle":"enrolled as: Student","id":"324","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"announcements","icon":"icon-announcement","hidden":null,"path":"\/courses\/324\/announcements","screenreader":"Course Announcements"},{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/324\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/324\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/324\/files","screenreader":"Course Files"}]},{"longName":"Philosophical Perspectives I - HUM131","shortName":"Philosophical Perspectives I","originalName":"Philosophical Perspectives I","courseCode":"HUM131","assetString":"course_443","href":"\/courses\/443","term":"Spring 2021","subtitle":"enrolled as: Student","id":"443","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/443\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/443\/files","screenreader":"Course Files"}]},{"longName":"Principles of Probability and Statistics - STA101","shortName":"Principles of Probability and Statistics","originalName":"Principles of Probability and Statistics","courseCode":"STA101","assetString":"course_447","href":"\/courses\/447","term":"Spring 2021","subtitle":"enrolled as: Student","id":"447","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"announcements","icon":"icon-announcement","hidden":null,"path":"\/courses\/447\/announcements","screenreader":"Course Announcements"},{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/447\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/447\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/447\/files","screenreader":"Course Files"}]},{"longName":"Public Speaking - ENG104","shortName":"Public Speaking","originalName":"Public Speaking","courseCode":"ENG104","assetString":"course_346","href":"\/courses\/346","term":"Fall 2020","subtitle":"enrolled as: Student","id":"346","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/346\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/346\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/346\/files","screenreader":"Course Files"}]},{"longName":"Real-time Data Analytics A - DAS151A","shortName":"Real-time Data Analytics A","originalName":"Real-time Data Analytics A","courseCode":"DAS151A","assetString":"course_331","href":"\/courses\/331","term":"Fall 2020","subtitle":"enrolled as: Student","id":"331","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/331\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/331\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/331\/files","screenreader":"Course Files"}]},{"longName":"Real-time Data Analytics B - DAS151B","shortName":"Real-time Data Analytics B","originalName":"Real-time Data Analytics B","courseCode":"DAS151B","assetString":"course_410","href":"\/courses\/410","term":"Spring 2021","subtitle":"enrolled as: Student","id":"410","image":null,"imagesEnabled":false,"position":null,"links":[{"css_class":"assignments","icon":"icon-assignment","hidden":null,"path":"\/courses\/410\/assignments","screenreader":"Course Assignments"},{"css_class":"discussions","icon":"icon-discussion","hidden":null,"path":"\/courses\/410\/discussion_topics","screenreader":"Course Discussions"},{"css_class":"files","icon":"icon-folder","hidden":null,"path":"\/courses\/410\/files","screenreader":"Course Files"}]}],"DASHBOARD_REORDERING_ENABLED":false,"notices":[]};
+    </script>
+
+    <script src="/dist/webpack-production/vendor.bundle-33e85d244e.js"></script>
+    <script src="/dist/javascripts/vendor/timezone/America/New_York-2ece7ac506.js"></script>
+    <script src="/dist/javascripts/vendor/timezone/en_US-f395725400.js"></script>
+    <script src="/dist/webpack-production/appBootstrap.bundle-6bbd47b337.js"></script>
+    <script src="/dist/webpack-production/common.bundle-3a0e3bd05c.js"></script>
+    <script src="/dist/webpack-production/dashboard.bundle-a9907e6fd3.js"></script>
+    <script src="/dist/webpack-production/dashboard_card.bundle-29d2065ed4.js"></script>
+    <script src="/dist/webpack-production/navigation_header.bundle-1ee38e3585.js"></script>
+
+
+    <script>
+        var className = document.documentElement.className;
+        document.documentElement.className = className.replace(/scripts-not-loaded/, '');
+    </script>
+
+    <script src="/ext/ftc-viewers.js"></script>
+
+
+</div> <!-- #application -->
+</body>
+</html>
